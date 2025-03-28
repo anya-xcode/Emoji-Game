@@ -4,11 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
+import Music from './music.jsx';
 
 import './EmojiGame.css';
 
 const EmojiGame = () => {
-  const emojiList = ['🎮', '👾', '🕹️', '💣', '🔫', '🎯', '🧩', '🏆', '💎', '⚔️'];
+  const emojiList = [ '👾', '🍔', '💣', '🌻','🐒', '🎯', '🧩', '🏆', '💎', '⚔️','💋','❤️‍🔥','👻','🙈','🐼','😍','😘','💕','☠️','🫶','💀','🙊','🌹','🔥','🪼','🦋','🐳','🐥','✨','🌸','🍩','🍻','🍾','♥️',];
 
   const difficultySettings = {
     Easy: { spawnRate: 1000, lifetime: 1500, winScore: 25 },
@@ -40,7 +41,7 @@ const EmojiGame = () => {
       setIsGameOver(true);
       setMessage(
         <span style={{ color: 'green' }}>
-          🎉 You Won! You scored {score} points!
+          🎉 🎊 You Won! You scored {score} points!🏆
         </span>
       );
 
@@ -122,7 +123,7 @@ const EmojiGame = () => {
     <div className="game-container">
       {showInstructions && (
         <div className="instructions">
-          <h2>Welcome to Emoji Catcher Game!</h2>
+          <h2>Welcome to Emoji Game!</h2>
           <p>Instructions:</p>
           <ul>
             <li>Catch emojis to earn points!</li>

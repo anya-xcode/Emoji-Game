@@ -4,7 +4,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #f0f8ff;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@ body, html {
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #ff69b4;
+    color: #b30a5e;
     text-shadow: 2px 2px #ffe4e1;
     animation: pop 1.5s infinite alternate;
   }
@@ -49,7 +49,7 @@ body, html {
   .game-area {
     width: 80%;
     height: 70vh;
-    background: linear-gradient(135deg, #add8e6, #d8bfd8);
+    background: linear-gradient(135deg, #72cdeb, #ea9fea);
     border: 3px solid #ddd;
     border-radius: 20px;
     position: relative;
@@ -58,7 +58,7 @@ body, html {
   
   .emoji {
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 5.0rem;
     cursor: pointer;
     user-select: none;
     transition: transform 0.2s;
@@ -183,7 +183,7 @@ body, html {
   padding: 15px 35px;
   border: none;
   border-radius: 15px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   margin-top: 20px;
@@ -192,7 +192,7 @@ body, html {
 
 .instructions button:hover {
   background-color: #ff007f;
-  transform: scale(1.08);
+  transform: scale(1.09);
 }
 
 @keyframes slideIn {
