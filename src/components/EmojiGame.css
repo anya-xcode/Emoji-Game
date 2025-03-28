@@ -1,0 +1,237 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .game-title {
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff69b4;
+    text-shadow: 2px 2px #ffe4e1;
+    animation: pop 1.5s infinite alternate;
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  
+  .score-time {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .game-area {
+    width: 80%;
+    height: 70vh;
+    background: linear-gradient(135deg, #add8e6, #d8bfd8);
+    border: 3px solid #ddd;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+  }
+  
+  .emoji:hover {
+    transform: scale(1.3);
+  }
+  
+  .game-over {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s;
+  }
+  
+  .game-over h2 {
+    font-size: 2rem;
+    color: #dc143c;
+  }
+  
+  .game-over button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .game-over button:hover {
+    background-color: #ff1493;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Game Container */
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions {
+  width: 60%;
+  max-width: 800px;
+  padding: 40px;
+  margin: auto;
+  background: linear-gradient(145deg, #1e1e2f, #282845);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.7s ease-out;
+  color: #d1d1e0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.instructions h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff6bcb;
+  text-shadow: 0 0 10px #ff6bcb, 0 0 5px #ff6bcb;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+}
+
+.instructions p {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #50fa7b;
+  font-weight: 700;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.instructions li {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  transition: transform 0.3s, color 0.3s;
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(145deg, #ff79c6, #8be9fd);
+  padding: 10px;
+  border-radius: 8px;
+  color: #282845;
+  font-weight: bold;
+}
+
+.instructions li:hover {
+  transform: scale(1.05);
+  color: #ff007f;
+}
+
+.instructions button {
+  background-color: #ff79c6;
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.instructions button:hover {
+  background-color: #ff007f;
+  transform: scale(1.08);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Game Over Message */
+.game-over h2 {
+  color: red;
+}
+
+/* You Won Message */
+.game-won h2 {
+  color: green;
+}
+
+/* Confetti Animation */
+@keyframes confettiFall {
+  0% { transform: translateY(-100vh) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  animation: confettiFall 3s linear infinite;
+  border-radius: 50%;
+}
+
+/* Multiple Colors for Confetti */
+.confetti:nth-child(2n) { background-color: blue; }
+.confetti:nth-child(3n) { background-color: yellow; }
+.confetti:nth-child(4n) { background-color: pink; }
+.confetti:nth-child(5n) { background-color: orange; }
